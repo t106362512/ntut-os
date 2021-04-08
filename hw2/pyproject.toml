@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "ntut-os-multithreadings"
+version = "0.1.0"
+description = ""
+authors = ["王志嘉 <t106362512@gmail.com>"]
+packages = [
+  {include = "Matrix"},
+]
+
+[tool.poetry.scripts]
+test-matrix = "Matrix.cli:app"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+typer = "^0.3.2"
+
+[tool.poetry.dev-dependencies]
+black = {extras = ["d"], version = "^21.6b0"}
+gprof2dot = "^2021.2.21"
+vmprof = "^0.4.15"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
